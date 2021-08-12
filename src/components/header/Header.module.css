@@ -1,0 +1,43 @@
+.app-header {
+    height: 64px;
+}
+
+.main-header {
+    background-color: #F3F5F7 !important;
+    line-height: 64px;
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+.title {
+    line-height: 64px !important;
+    display: inline;
+    color: #03A9F3 !important;
+}
+
+.App-logo {
+
+    height: 40vmin;
+    pointer-events: none;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

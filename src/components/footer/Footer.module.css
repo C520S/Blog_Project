@@ -1,0 +1,15 @@
+.footer {
+    height: 40px;
+}
+
+.main-footer {
+    width: 1024px;
+    height: 40px !important;
+    margin: 0 auto !important;
+
+}
+
+.footer-title {
+
+    text-align: center;
+}
