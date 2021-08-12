@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './App.module.css';
 import { Menu } from 'antd';
-import { Header, Footer } from './components'
+import { Header, Footer, Carousel } from './components'
 
 
 function App() {
@@ -22,6 +22,9 @@ function App() {
           <Menu.Item key="9">Armenian food</Menu.Item>
           <Menu.Item key="10">Chinese food</Menu.Item>
         </Menu>
+      </div>
+      <div className={styles['image-box']}>
+        <Carousel />
       </div>
       <Footer />
     </div>
