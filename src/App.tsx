@@ -1,10 +1,10 @@
 import React from 'react';
 
 import styles from './App.module.css';
-import { Menu } from 'antd';
-import { Header, Footer, Carousel } from './components'
+import { Menu, Typography } from 'antd';
+import { Header, Footer, Carousel, ProductCollection, BusinessPartners } from './components'
 
-
+const prodcutList = "页面内容";
 function App() {
   return (
     <div className={styles.App}>
@@ -26,6 +26,11 @@ function App() {
       <div className={styles['image-box']}>
         <Carousel />
       </div>
+      <ProductCollection
+        title={<Typography.Title level={3} type={'warning'}>Recommended Menu</Typography.Title>}
+        products={prodcutList} />
+      <div className={styles.Coperation}> <BusinessPartners /></div>
+
       <Footer />
     </div>
 

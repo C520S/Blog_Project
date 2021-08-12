@@ -1,0 +1,13 @@
+.page-context {
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #F3F5F7;
+}
+
+.Top-line {
+    height: 44px;
+}
+
+.Product-menu-info {
+    display: flex;
+}
