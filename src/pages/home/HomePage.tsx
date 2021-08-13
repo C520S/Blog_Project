@@ -1,13 +1,70 @@
 import React from 'react';
 import styles from './HomePage.module.css';
-import { Menu, Typography } from 'antd';
+import { Menu, Typography, Spin } from 'antd';
 import { Header, Footer, Carousel, ProductCollection, BusinessPartners } from '../../components'
-const prodcutList = [{ idrecipe: 1, id_category: 2, foodname: '肉夹馍', times: '10min', shoppinglist: '苹果', guide: '知道', levels: '10' }, { idrecipe: 2, id_category: 2, foodname: '菜价', times: '10min', shoppinglist: '苹果', guide: '知道', levels: '10' }];
+import axios from 'axios';
 
-export class HomePage extends React.Component {
+interface State {
+    loading: boolean;
+    error: string | null;
+    prodcutList: any[];
+
+}
+
+interface Props {
+
+}
+
+
+
+
+
+export class HomePage extends React.Component<Props, State>{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: true,
+            error: null,
+            prodcutList: [],
+
+
+        }
+    }
+
+    async componentDidMount() {
+        try {
+            const { data } = await axios.get(`http://localhost:5000/homePageData`);
+            this.setState({ loading: false, error: null, prodcutList: data });
+        } catch (error) {
+            this.setState({ error: error.message, loading: false });
+        }
+
+    }
+
+
 
     render() {
-        return <div><Header />
+
+        const { prodcutList, loading, error } = this.state;
+        if (loading) {
+            return (
+                <Spin
+                    size="large"
+                    style={{
+                        marginTop: 200,
+                        marginBottom: 200,
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        width: "100%",
+                    }}
+                />
+            );
+        }
+        if (error) {
+            return <h1>Website error:{error}</h1>;
+        }
+        return (<div><Header />
             <div className={styles.menu}>
                 <Menu mode={'horizontal'} className={styles['main-menu']}>
                     <Menu.Item key="1">Pasta</Menu.Item>
@@ -30,6 +87,9 @@ export class HomePage extends React.Component {
                 products={prodcutList} />
             <div className={styles.Coperation}> <BusinessPartners /></div>
 
-            <Footer /></div>
+            <Footer />
+        </div>)
     }
+
 }
+
