@@ -20,7 +20,7 @@
 
 .recipe-content {
     width: 1024px;
-    height: 867px;
+    height: 800px;
     margin: 0 auto;
     background-color: #f3f5f7;
 }
@@ -51,6 +51,7 @@
     color: #03a9f3;
     height: 54px;
     line-height: 54px;
+    overflow: auto;
 }
 
 .ingredients {
@@ -68,4 +69,35 @@
     padding-left: 10px;
     padding-top: 20px;
     overflow: auto;
+}
+
+.guide-box {
+    width: 910px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 55px;
+    border: 1px solid #03a9f3;
+
+}
+
+.guide-title {
+    font-size: 20px;
+    padding-left: 10px;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    background-color: #03a9f3;
+}
+
+.guide-info {
+    height: 260px;
+    font-size: 25px;
+    color: #03a9f3;
+    overflow: auto;
+}
+
+.Coperation {
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #F3F5F7;
 }

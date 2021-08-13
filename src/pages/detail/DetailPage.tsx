@@ -66,8 +66,13 @@ const DetailPageComponent: React.FC<RouteComponentProps<MatchParams>> = (props) 
 
                 </div>
             </div>
-            <div></div>
+            <div className={styles['guide-box']}>
+                <div className={styles['guide-title']}><strong>How do you make delicious {product.recipe.foodname}?</strong></div>
+                <div dangerouslySetInnerHTML={{ __html: product.recipe.guide }} className={styles['guide-info']}></div>
+            </div>
         </div>
+        <div className={styles.Coperation}> <BusinessPartners /></div>
+        <Footer />
 
     </>;
 }
