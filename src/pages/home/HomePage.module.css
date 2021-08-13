@@ -1,0 +1,24 @@
+.menu {
+    height: 46px;
+}
+
+.main-menu {
+    width: 1024px;
+    font-size: 15px !important;
+    margin: 0 auto !important;
+    background-color: #1976D2 !important;
+    color: #f5f5f5 !important;
+}
+
+.image-box {
+    margin: 0 auto;
+    height: 440px;
+    width: 1024px;
+
+}
+
+.Coperation {
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #F3F5F7;
+}

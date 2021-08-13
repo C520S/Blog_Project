@@ -1,37 +1,20 @@
 import React from 'react';
 
 import styles from './App.module.css';
-import { Menu, Typography } from 'antd';
-import { Header, Footer, Carousel, ProductCollection, BusinessPartners } from './components'
 
-const prodcutList = "页面内容";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import { HomePage } from './pages';
+
 function App() {
   return (
     <div className={styles.App}>
-      <Header />
-      <div className={styles.menu}>
-        <Menu mode={'horizontal'} className={styles['main-menu']}>
-          <Menu.Item key="1">Pasta</Menu.Item>
-          <Menu.Item key="2">Red meat</Menu.Item>
-          <Menu.Item key="3">Chicken</Menu.Item>
-          <Menu.Item key="4">Salads</Menu.Item>
-          <Menu.Item key="5">Seafood</Menu.Item>
-          <Menu.Item key="6">Sushi</Menu.Item>
-          <Menu.Item key="7">Vegan</Menu.Item>
-          <Menu.Item key="8">Finnish food</Menu.Item>
-          <Menu.Item key="9">Armenian food</Menu.Item>
-          <Menu.Item key="10">Chinese food</Menu.Item>
-        </Menu>
-      </div>
-      <div className={styles['image-box']}>
-        <Carousel />
-      </div>
-      <ProductCollection
-        title={<Typography.Title level={3} type={'warning'}>Recommended Menu</Typography.Title>}
-        products={prodcutList} />
-      <div className={styles.Coperation}> <BusinessPartners /></div>
-
-      <Footer />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route render={() => <h1>The page you requested cannot be found</h1>} />
+        </Switch>
+      </BrowserRouter>
     </div>
 
 
