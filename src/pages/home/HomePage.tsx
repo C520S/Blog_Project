@@ -88,7 +88,7 @@ export class HomePage extends React.Component<Props, State>{
                 <Carousel />
             </div>
             <ProductCollection
-                title={<Typography.Title level={3} type={'warning'}>Recommended Menu</Typography.Title>}
+                title={<Typography.Title level={3} type={'warning'}>Recommended Recipes</Typography.Title>}
                 products={prodcutList} />
             <div className={styles.Coperation}> <BusinessPartners /></div>
 

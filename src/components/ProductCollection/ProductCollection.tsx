@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProductCollection.module.css'
-import { Divider, Typography } from 'antd';
-import {ProductImage} from './Productimage'
+import { Divider } from 'antd';
+import { ProductImage } from './Productimage'
 
 interface PropsType {
     title: JSX.Element;
