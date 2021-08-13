@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './HomePage.module.css';
 import { Menu, Typography } from 'antd';
 import { Header, Footer, Carousel, ProductCollection, BusinessPartners } from '../../components'
-const prodcutList = [{ idrecipe: 1, id_category: 2, foodname: '肉夹馍', times: '10min', shoppinglist: '苹果', guide: '知道', levels: '10' }, { idrecipe: 1, id_category: 2, foodname: '菜价', times: '10min', shoppinglist: '苹果', guide: '知道', levels: '10' }];
+const prodcutList = [{ idrecipe: 1, id_category: 2, foodname: '肉夹馍', times: '10min', shoppinglist: '苹果', guide: '知道', levels: '10' }, { idrecipe: 2, id_category: 2, foodname: '菜价', times: '10min', shoppinglist: '苹果', guide: '知道', levels: '10' }];
 
 export class HomePage extends React.Component {
 

@@ -1,13 +1,16 @@
 import React from 'react';
+import { withRouter, RouteComponentProps, Link } from 'react-router-dom'
 
-interface PropsType {
+interface PropsType extends RouteComponentProps {
     id: number;
     name: string;
     time: string;
     picture: string;
 }
 
-export const ProductImage: React.FC<PropsType> = (props) => {
-    let { id, name, time, picture } = props;
-    return <div>{name}</div>;
+const ProductImageComponent: React.FC<PropsType> = (props) => {
+    let { id, name, time, picture, } = props;
+    return <Link to={`detail/${id}`}><div>{name}</div></Link>;
 }
+
+export const ProductImage = withRouter(ProductImageComponent)
