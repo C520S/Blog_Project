@@ -1,6 +1,21 @@
 .recipe-box {
     width: 280px;
     height: 280px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+
+}
+
+.recipe-box:hover {
+    transform: scale(1.05);
 }
 
 .recipe-img {
@@ -10,5 +25,5 @@
 
 .recipe-font {
     height: 55px;
- 
+
 }
