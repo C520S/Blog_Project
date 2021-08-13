@@ -41,6 +41,11 @@ export class HomePage extends React.Component<Props, State>{
         }
 
     }
+    getCategories = (e) => {
+
+        axios.get(`http://localhost:5000/categories_list/${e.key}`).then(({ data }) => { this.setState({ prodcutList: data }) })
+    }
+
 
 
 
@@ -67,16 +72,16 @@ export class HomePage extends React.Component<Props, State>{
         return (<div><Header />
             <div className={styles.menu}>
                 <Menu mode={'horizontal'} className={styles['main-menu']}>
-                    <Menu.Item key="1">Pasta</Menu.Item>
-                    <Menu.Item key="2">Red meat</Menu.Item>
-                    <Menu.Item key="3">Chicken</Menu.Item>
-                    <Menu.Item key="4">Salads</Menu.Item>
-                    <Menu.Item key="5">Seafood</Menu.Item>
-                    <Menu.Item key="6">Sushi</Menu.Item>
-                    <Menu.Item key="7">Vegan</Menu.Item>
-                    <Menu.Item key="8">Finnish food</Menu.Item>
-                    <Menu.Item key="9">Armenian food</Menu.Item>
-                    <Menu.Item key="10">Chinese food</Menu.Item>
+                    <Menu.Item key="1" onClick={this.getCategories}>Pasta</Menu.Item>
+                    <Menu.Item key="2" onClick={this.getCategories}>Red meat</Menu.Item>
+                    <Menu.Item key="3" onClick={this.getCategories}>Chicken</Menu.Item>
+                    <Menu.Item key="4" onClick={this.getCategories}>Salads</Menu.Item>
+                    <Menu.Item key="5" onClick={this.getCategories}>Seafood</Menu.Item>
+                    <Menu.Item key="6" onClick={this.getCategories}>Sushi</Menu.Item>
+                    <Menu.Item key="7" onClick={this.getCategories}>Vegan</Menu.Item>
+                    <Menu.Item key="8" onClick={this.getCategories}>Finnish food</Menu.Item>
+                    <Menu.Item key="9" onClick={this.getCategories}>Armenian food</Menu.Item>
+                    <Menu.Item key="10" onClick={this.getCategories}>Chinese food</Menu.Item>
                 </Menu>
             </div>
             <div className={styles['image-box']}>
